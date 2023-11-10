@@ -57,11 +57,5 @@ public class Poempl {
         JOptionPane.showMessageDialog(null, "Poem added to Poem.txt.");
         poemTextField.setText("");
     }
-
-//    public static void main(String[] args) {
-//        PoemDAO poemDAO = new PoemDAO("Poem.txt");
-//        PoemBO poemBO = new PoemBO(poemDAO);
-//        SwingUtilities.invokeLater(() -> new Poempl(poemBO));
-//    }
 }
 
