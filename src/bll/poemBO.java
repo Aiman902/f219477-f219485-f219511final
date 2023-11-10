@@ -1,9 +1,18 @@
 package bll;
 
+import dal.poemDAO;
+
 public class poemBO {
 
-	public poemBO() {
-		// TODO Auto-generated constructor stub
-	}
+    private poemDAO poemdao;
+
+    public poemBO(poemDAO poemdao) {
+        this.poemdao = poemdao;
+    }
+
+    public void addPoem(String Poem) {
+        poemdao.addPoem(Poem);
+    }
+
 
 }

@@ -6,10 +6,11 @@ import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 
+import bll.poemBO;
+import dal.poemDAO;
 import dal.rootDAO;
 
 public class Mainpl {
@@ -35,7 +36,9 @@ public class Mainpl {
         addPoemButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                // Add Poem logic here
+            	 poemDAO poemdao = new poemDAO("src\\Poem.txt");
+              poemBO poembo = new poemBO(poemdao);
+              new Poempl(poembo);
             }
         });
 
